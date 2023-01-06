@@ -1,0 +1,1798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SecuritySystem.Api</name>
+    </assembly>
+    <members>
+        <member name="P:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetEntitiesAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAllAsync">Function to select entries</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetEntities(System.Func{System.Collections.Generic.IList{`0}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAll">Function to select entries</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.AddDeletedFilter(System.Linq.IQueryable{`0},System.Boolean@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Adds "Deleted" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entries, if its need
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="includeDeleted">Whether to include deleted items</param>
+            <param name="activeOnly">Whether to filter active items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.AddActiveOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="activeOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.AddDeletedOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "DeletedOnly" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity" /> or <see cref="!:IStatusControlEntiry"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="deletedOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetUpdateMan">
+            <summary>
+            Return the Current User Name for UpdateMan Fields
+            </summary>
+            <returns>Login Name or Email of Current User</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetByExpressionFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetByExpressionAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)" -->
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.CustomKeyEntityRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entities entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="P:SecuritySystem.Api.DataProviders.EntityRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetEntitiesAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAllAsync">Function to select entries</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetEntities(System.Func{System.Collections.Generic.IList{`0}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAll">Function to select entries</param>
+            <param name="getCacheKey">Function to get a cache key; pass null to don't cache; return null from this function to use the default key</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.AddDeletedFilter(System.Linq.IQueryable{`0},System.Boolean@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Adds "Deleted" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entries, if its need
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="includeDeleted">Whether to include deleted items</param>
+            <param name="activeOnly">Whether to filter active items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.AddActiveOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="activeOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.AddDeletedOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "DeletedOnly" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity" /> or <see cref="!:IStatusControlEntiry"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="deletedOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetUpdateMan">
+            <summary>
+            Return the Current User Name for UpdateMan Fields
+            </summary>
+            <returns>Login Name or Email of Current User</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetByIdAsync(System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="id">Entity entry identifier</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetByIdsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="ids">Entity entry identifiers</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.LoadOriginalCopyAsync(`0)">
+            <summary>
+            Loads the original copy of the entity
+            </summary>
+            <param name="entity">Entity</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the copy of the passed entity
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>        
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.EntityRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="P:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetEntitiesAsync(System.Func{System.Threading.Tasks.Task{System.Collections.Generic.IList{`0}}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAllAsync">Function to select entries</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetEntities(System.Func{System.Collections.Generic.IList{`0}})">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="getAll">Function to select entries</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.AddDeletedFilter(System.Linq.IQueryable{`0},System.Boolean@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Adds "Deleted" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entries, if its need
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="includeDeleted">Whether to include deleted items</param>
+            <param name="activeOnly">Whether to filter active items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.AddActiveOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "Active" filter to query which contains <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="activeOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.AddDeletedOnlyFilter(System.Linq.IQueryable{`0},System.Boolean@)">
+            <summary>
+            Adds "DeletedOnly" filter to query which contains <see cref="T:BlueSky.Core.ISoftDeletedEntity" /> or <see cref="!:IStatusControlEntiry"/> entries, if its need
+            </summary>
+            <param name="query">Entity entries</param>
+            <param name="deletedOnly">Whether to include deleted items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetUpdateMan">
+            <summary>
+            Return the Current User Name for UpdateMan Fields
+            </summary>
+            <returns>Login Name or Email of Current User</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetByIdAsync(System.Guid,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="guid">Entity entry identifier</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">shows deleted only</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetByIdsAsync(System.Collections.Generic.IList{System.Guid},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="guids">Entity entry identifiers</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Threading.Tasks.Task{System.Linq.IQueryable{`0}}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.LoadOriginalCopyAsync(`0)">
+            <summary>
+            Loads the original copy of the entity
+            </summary>
+            <param name="entity">Entity</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the copy of the passed entity
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.GuidEntityRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1">
+            <summary>
+            Represents an entity repository
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+        </member>
+        <member name="P:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.GetByExpressionFirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.GetByExpressionAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>        
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.ICustomKeyRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entities entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.IGuidRepository`1">
+            <summary>
+            Represents an entity repository
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+        </member>
+        <member name="P:SecuritySystem.Api.DataProviders.IGuidRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.GetByIdAsync(System.Guid,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="guid">Entity entry identifier</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.GetByIdsAsync(System.Collections.Generic.IList{System.Guid},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="guids">Entity entry identifiers</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.LoadOriginalCopyAsync(`0)">
+            <summary>
+            Loads the original copy of the entity
+            </summary>
+            <param name="entity">Entity</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the copy of the passed entity
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>        
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IGuidRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.IRepository`1">
+            <summary>
+            Represents an entity repository
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+        </member>
+        <member name="P:SecuritySystem.Api.DataProviders.IRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.GetByIdAsync(System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get the entity entry
+            </summary>
+            <param name="id">Entity entry identifier</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entry
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.GetByIdsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get entity entries by identifiers
+            </summary>
+            <param name="ids">Entity entry identifiers</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.GetAll(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>Entity entries</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.GetAllAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.GetAllPagedAsync(System.Func{System.Linq.IQueryable{`0},System.Linq.IQueryable{`0}},System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get paged list of all entity entries
+            </summary>
+            <param name="func">Function to select entries</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="getOnlyTotalCount">Whether to get only the total number of entries without actually loading data</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the paged list of entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.InsertAsync(`0,System.Boolean)">
+            <summary>
+            Insert the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.InsertAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>
+            Insert entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.LoadOriginalCopyAsync(`0)">
+            <summary>
+            Loads the original copy of the entity
+            </summary>
+            <param name="entity">Entity</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the copy of the passed entity
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.UpdateAsync(`0,System.Boolean)">
+            <summary>
+            Update the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.UpdateAsync(System.Collections.Generic.IList{`0},System.Boolean)">
+            <summary>        
+            Update entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.DeleteAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Delete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.DeleteAsync(System.Collections.Generic.IList{`0},System.Boolean,System.Boolean)">
+            <summary>
+            Delete entity entries
+            </summary>
+            <param name="entities">Entity entries</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <param name="DeletePermanently">Whether to delete the record permanently </param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete entity entries by the passed predicate
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.UnDeleteAsync(`0,System.Boolean)">
+            <summary>
+            UnDelete the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.SetActiveAsync(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Active the entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <param name="SetActive">Set Active or Inactive</param>
+            <param name="publishEvent">Whether to publish event notification</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.EntityFromSqlAsync(System.String,LinqToDB.Data.DataParameter[])">
+            <summary>
+            Executes SQL using System.Data.CommandType.StoredProcedure command type and returns results as collection of values of specified type
+            </summary>
+            <param name="sql">Sql Query</param>
+            <param name="parameters">Command parameters</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the entity entries
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether Any Records with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.SingleOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Check Whether SingleOrDefault with Expression
+            </summary>
+            <param name="predicate">A function to test each element for a condition</param>
+            <param name="includeDeleted">Whether to include deleted items (applies only to <see cref="T:BlueSky.Core.ISoftDeletedEntity"/> entities)</param>
+            <param name="activeOnly">Whether to filter active items (applies only to <see cref="T:BlueSky.Core.IActiveFilterEntity"/> entities</param>
+            <param name="deletedOnly">Whether to fileter with deleted Only items</param>
+            <returns>
+            A task that represents the asynchronous operation
+            The task result contains the number of deleted records
+            </returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.BeginTransactionAsync">
+            <summary>
+            Start Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.CommitTransactionAsync">
+            <summary>
+            Commit Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.RollbackTransactionAsync">
+            <summary>
+            Rollback Transaction
+            </summary>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.Detach(`0)">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entity">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.IRepository`1.Detach(System.Collections.Generic.IList{`0})">
+            <summary>
+            Detach entity entry
+            </summary>
+            <param name="entities">Entity entry</param>
+            <returns>A task that represents the asynchronous operation</returns>
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.allmigration">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.allmigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.allmigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.allmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.sequencecolumnchange">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.sequencecolumnchange.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.sequencecolumnchange.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.sequencecolumnchange.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn1">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.roasterUpdatecolumn1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.scheduleclassdefstatus">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.scheduleclassdefstatus.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.scheduleclassdefstatus.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.scheduleclassdefstatus.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.employeetypeadded">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.employeetypeadded.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.employeetypeadded.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.employeetypeadded.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.removedrostercode">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removedrostercode.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removedrostercode.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removedrostercode.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.hello">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.hello.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.hello.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.hello.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.UpdateEmployeeMaster">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.UpdateEmployeeMaster.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.UpdateEmployeeMaster.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.UpdateEmployeeMaster.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperience">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperience.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperience.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperience.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperienceall">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperienceall.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperienceall.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.removeworkexperienceall.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.addworkexperience">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addworkexperience.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addworkexperience.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addworkexperience.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedentityinexperienceAndLicense">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedentityinexperienceAndLicense.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedentityinexperienceAndLicense.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedentityinexperienceAndLicense.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.licensetableremove">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.licensetableremove.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.licensetableremove.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.licensetableremove.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.addlicensetable">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addlicensetable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addlicensetable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addlicensetable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.importutcemployeemaster">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.importutcemployeemaster.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.importutcemployeemaster.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.importutcemployeemaster.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.performancechanges">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.performancechanges.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.performancechanges.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.performancechanges.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:SecuritySystem.Api.Domain.EmployeeAttendance.EmployeeGu">
+            <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
+        </member>
+        <member name="P:SecuritySystem.Api.Domain.ServiceSiteArea.SiteCodeNavigation">
+            <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
+        </member>
+        <member name="P:SecuritySystem.Api.Domain.ServiceSiteMaster.CustomKey">
+            <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
+        </member>
+        <member name="P:SecuritySystem.Api.Domain.ServiceSitePostPoint.CustomKey">
+            <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
+        </member>
+    </members>
+</doc>
