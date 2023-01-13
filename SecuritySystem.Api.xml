@@ -1782,6 +1782,30 @@
         <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.performancechanges.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfolder">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfolder.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfolder.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfolder.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfoldernew">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfoldernew.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfoldernew.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfoldernew.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="P:SecuritySystem.Api.Domain.EmployeeAttendance.EmployeeGu">
             <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
         </member>
