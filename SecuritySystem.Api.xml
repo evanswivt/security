@@ -1806,6 +1806,18 @@
         <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.uploaddocumentfoldernew.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedistatus">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedistatus.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedistatus.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SecuritySystem.Api.DataProviders.Migrations.MsSql.addedistatus.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
         <member name="P:SecuritySystem.Api.Domain.EmployeeAttendance.EmployeeGu">
             <summary> Implement for Localization Service for CustomKeyEntity, to define the CustomKey Value </summary>
         </member>
